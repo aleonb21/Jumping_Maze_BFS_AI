@@ -6,14 +6,14 @@ How to run:
 "python main.py" and follow directions
 
 Jumping Jim Puzzle explanation:
-*N x N board required composed of digits from neg(N-1) to (N-1) inclusive.
+* N x N board required composed of digits from neg(N-1) to (N-1) inclusive.
 
-*Initial State: Position 0x0 in the board (top left corner)
+* Initial State: Position 0x0 in the board (top left corner)
 
-*Transition function: Initially, horizontal or vertical movement in aaccordance to the digit of the current position. Landing in negative digits in the board will cause AI to move diagonally instead, which will revert to horizontal and vertical if AI lands in negative number again.
+* Transition function: Initially, horizontal or vertical movement in aaccordance to the digit of the current position. Landing in negative digits in the board will cause AI to move diagonally instead, which will revert to horizontal and vertical if AI lands in negative number again.
 
-*Goal State: N-1xN-1 position (bottom right corner)
+* Goal State: N-1xN-1 position (bottom right corner)
 
-*Board positions read from 0 to N-1 in a left to right and top to bottom order; 0 being top left, and N-1 being bottom right.
+* Board positions read from 0 to N-1 in a left to right and top to bottom order; 0 being top left, and N-1 being bottom right.
 
-*Time of execution is calculated over 100 iterations.
+* Time of execution is calculated over 100 iterations.
