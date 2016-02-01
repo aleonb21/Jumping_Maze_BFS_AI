@@ -1,0 +1,35 @@
+#****IMPORT YOUR SEARCH FILE HERE*****
+import Angel_FP_MMSolver_v5
+import BFS
+from Kiril_LimDFS_Timed import DepthFirst
+import HSearch_v1_timed
+import HSearch_v2_timed
+import HSearch_v3_timed
+import HSearch_v4_timed
+import A_star2_timed
+
+board_name = raw_input("Enter name of board, including file extension: ")
+
+board = Angel_FP_MMSolver_v5.createADJList(board_name)
+board1 = Angel_FP_MMSolver_v5.createADJList1(board_name)
+
+print "The board selected is:"
+for lists in board1[2]:   #for each row in the BOARD
+  print lists           #print the row
+print("")
+
+#BFS
+BFS.BreadthFirstSearch(board1)
+
+#DFS
+depthFirst = DepthFirst()
+depthFirst.RunDFSClosed(board)
+
+#Greedy(Heur)
+HSearch_v1_timed.Heuristic_v1_runner(board)
+HSearch_v2_timed.Heuristic_v2_runner(board)
+HSearch_v3_timed.Heuristic_v3_runner(board)
+HSearch_v4_timed.Heuristic_v4_runner(board)
+
+#A*
+A_star2_timed.A_star_runner(board)
